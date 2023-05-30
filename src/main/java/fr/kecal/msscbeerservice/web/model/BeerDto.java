@@ -1,5 +1,6 @@
 package fr.kecal.msscbeerservice.web.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Null;
 import jakarta.validation.constraints.Positive;
@@ -32,7 +33,9 @@ public class BeerDto {
     private BigDecimal price;
     private Integer quantityOnHand;
     @Null
+    @JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ssZ", shape=JsonFormat.Shape.STRING)
     private OffsetDateTime createdDate;
     @Null
+    @JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ssZ", shape=JsonFormat.Shape.STRING)
     private OffsetDateTime lastModifiedDate;
 }
