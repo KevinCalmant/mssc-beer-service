@@ -1,6 +1,7 @@
 package fr.kecal.msscbeerservice.web.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import fr.kecal.msscbeerservice.bootstrap.BeerLoader;
 import fr.kecal.msscbeerservice.web.model.BeerDto;
 import fr.kecal.msscbeerservice.web.model.BeerStyleEnum;
 import java.math.BigDecimal;
@@ -64,7 +65,7 @@ class BeerControllerTest {
             .beerName("My Beer")
             .beerStyle(BeerStyleEnum.ALE)
             .price(new BigDecimal("2.99"))
-            .upc(123123123123L)
+            .upc(BeerLoader.BEER_1_UPC)
             .build();
     }
 }
